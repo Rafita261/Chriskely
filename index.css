@@ -116,8 +116,7 @@ img{
     color: #1B5E20;
 }
 
-#send_message input,
-#send_message textarea {
+#send_message input,#send_message textarea {
     font-size: 1em;
     padding: 10px;
     margin-bottom: 15px;
