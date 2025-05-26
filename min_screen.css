@@ -1,0 +1,84 @@
+/* min_screen.css */
+
+/* Appliquer des styles spécifiques pour les écrans de moins de 768px */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 5%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin: 8px 0;
+    }
+
+    p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .flex-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .w50 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .services div {
+        width: 90%;
+        margin: 10px auto;
+        height: auto;
+        padding: 10px;
+    }
+
+    #send_message {
+        width: 80%;
+        padding: 10px;
+    }
+
+    img{
+        max-width: 25%;
+        height: auto;
+    }
+
+    #send_message input,
+    #send_message textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    #send_message button {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    .top-right-button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+}
