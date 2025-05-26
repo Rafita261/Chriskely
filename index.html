@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <section id="home">
+    <section id="home" class="fade-in">
+        <a href="https://chriskely.vercel.app" class="top-right-button" target="_blank" rel="noopener noreferrer">Terminal Portfolio</a>
         <div class="flex-row">
             <div>
-                <h1>Hi, I'm Fitahiana Christalin <br> RATSIMBAZAFY</h1>
-                <p>Backend Developer passionate about AI and Cybersecurity. I specialize in building scalable and secure server-side applications while exploring advancements in technology. I am committed to delivering innovative solutions that drive meaningful impact.</p>
+                <h1 class="animate-text">Hi, I'm Fitahiana Christalin <br> RATSIMBAZAFY</h1>
+                <p class="animate-text">Backend Developer passionate about AI and Cybersecurity. I specialize in building scalable and secure server-side applications while exploring advancements in technology. I am committed to delivering innovative solutions that drive meaningful impact.</p>
             </div>
         </div>
     </section>
     <section id="about">
         <h2>About Me</h2>
-        <p>I am currently in my second year of a Bachelor's degree (2ème année de licence) at ENI Fianarantsoa, specializing in General Computer Science (Informatique Général). I am passionate about building robust and scalable backend solutions. With experience in various technologies, I strive to optimize performance and ensure the best user experience. My expertise lies in backend development, API design, and system optimization, which allows me to create efficient and secure server-side applications. I am also deeply interested in the fields of Artificial Intelligence and Cybersecurity, constantly exploring advancements to stay at the forefront of technology.</p>
-        <p>Currently, I am seeking a 3-month internship opportunity starting in August or September. I am eager to contribute my skills and knowledge to a dynamic team while gaining valuable hands-on experience in a professional environment. If you are looking for a dedicated and enthusiastic intern, I would be thrilled to collaborate and make a meaningful impact.</p>
+        <p>I am a second-year Bachelor's student at ENI Fianarantsoa, specializing in General Computer Science. Passionate about backend development, I focus on building scalable and secure server-side applications. My interests also include Artificial Intelligence and Cybersecurity, where I continuously explore advancements to stay updated.</p>
+        <p>I am currently seeking a 3-month internship starting in August or September to apply my skills and gain professional experience. If you're looking for a motivated and dedicated intern, I would be excited to contribute to your team.</p>
     </section>
     <section id="service">
         <h2>Services</h2>
@@ -37,15 +38,15 @@
             </div>
         </div>
     </section>
-    <section id="contact" style="height: 80vh !important;">
+    <section id="contact" style="height: 80vh !important;max-height: 80%;">
         <h2 style="top: 40px;">Contact Me</h2>
         <div class="flex-row">
             <div class="w50" style="margin-top: -5%;">
                 <img src="file_0000000044346230a53bb4ad6ce50743.png" alt="">
             </div>
-            <div class="w50" style="margin-top: -8%;">
+            <div class="w50" style="margin-top: -8%; max-height: 95%;">
                 <h3 style="text-align: center;">Send me a message</h3>
-                <form action="" id="send_message">
+                <form id="send_message" >
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" >
 
@@ -55,7 +56,7 @@
                     <label for="message">Message: <span style="color: red;">*</span></label>
                     <textarea id="message" name="message" rows="4" required style="resize: none;"></textarea>
 
-                    <button type="submit">Send</button>
+                    <button>Send</button>
                 </form>
             </div>
         </div>
