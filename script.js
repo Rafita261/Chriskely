@@ -58,10 +58,18 @@ async function send(event) {
 
         const result = await response.text();
         console.log(result);
-        alert("Message envoyé avec succès !");
+        Swal.fire({
+            icon: 'success',
+            title: 'Succès',
+            text: 'Message envoyé avec succès !',
+        });
     } catch (error) {
         console.error('Une erreur est survenue lors de l’envoi du message :', error);
-        alert("Erreur lors de l’envoi du message. Veuillez réessayer plus tard.");
+        Swal.fire({
+            icon: 'error',
+            title: 'Erreur',
+            text: 'Une erreur est survenue lors de l’envoi du message. Veuillez réessayer plus tard.'
+        })
     }
     finally {
         document.getElementById("send_message").reset();
