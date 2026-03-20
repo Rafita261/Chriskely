@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitahiana Christalin — Portfolio</title>
+  <meta name="description" content="Portfolio de RATSIMBAZAFY Fitahiana Christalin — développeur full stack, algorithmique, data et cybersécurité." />
+  <style>
+    :root{
+      --bg:#08111f;
+      --bg-2:#0f1b2d;
+      --panel:#101d31;
+      --panel-2:#13233a;
+      --soft:#90a3bf;
+      --text:#edf4ff;
+      --line:rgba(255,255,255,.08);
+      --line-2:rgba(255,255,255,.16);
+      --brand:#63b3ff;
+      --brand-2:#8b7bff;
+      --good:#7ef2c5;
+      --shadow:0 16px 50px rgba(0,0,0,.28);
+      --radius:24px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top left, rgba(99,179,255,.18), transparent 30%),radial-gradient(circle at top right, rgba(139,123,255,.15), transparent 28%),linear-gradient(180deg, #07101d 0%, #0a1322 28%, #0e1930 100%);line-height:1.6}
+    a{color:inherit;text-decoration:none} .container{width:min(calc(100% - 32px), var(--max)); margin:0 auto} .section{padding:92px 0}
+    .muted{color:var(--soft)} .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;border:1px solid var(--line-2);background:rgba(255,255,255,.04);color:#c9dcff;font-size:.92rem;font-weight:700;letter-spacing:.02em}
+    .eyebrow::before{content:"";width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg, var(--brand), var(--brand-2));box-shadow:0 0 18px rgba(99,179,255,.8)}
+    .nav-wrap{position:sticky; top:0; z-index:40;backdrop-filter: blur(12px);background:rgba(8,17,31,.72);border-bottom:1px solid rgba(255,255,255,.05)}
+    .nav{display:flex; align-items:center; justify-content:space-between;gap:20px; padding:16px 0}.brand{font-weight:800; letter-spacing:-.03em; font-size:1.05rem}.brand span{color:var(--brand)}
+    .nav-links{display:flex; gap:18px; flex-wrap:wrap; align-items:center;color:#dce7fb; font-size:.95rem}.nav-links a{opacity:.84}.nav-links a:hover{opacity:1}
+    .hero{padding:84px 0 62px;position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns: 1.4fr .9fr;gap:28px;align-items:stretch}
+    .hero-card,.panel{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)} .hero-card{padding:34px}
+    .hero h1{margin:18px 0 14px;font-size:clamp(2.3rem, 5vw, 4.6rem);line-height:.96;letter-spacing:-.055em}.hero h1 .accent{background:linear-gradient(135deg, #fff, #b6d7ff 40%, #9eabff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p.lead{margin:0;max-width:760px;color:#c7d7ef;font-size:1.08rem}.hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:24px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px;padding:14px 18px;border-radius:16px;border:1px solid var(--line-2);font-weight:700;transition:transform .2s ease, border-color .2s ease, background .2s ease}.btn:hover{transform:translateY(-2px)}
+    .btn.primary{background:linear-gradient(135deg, var(--brand), #7f8dff);color:#07111f;border-color:transparent}.btn.secondary{background:rgba(255,255,255,.04);color:#eff5ff}
+    .mini-grid{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:16px;padding:20px}.mini-card{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));padding:20px;min-height:144px}
+    .mini-card strong{display:block;font-size:1.8rem;line-height:1;margin-bottom:8px;letter-spacing:-.05em}.mini-card span{color:#dbe7f8;font-weight:700}.mini-card p{margin:8px 0 0;color:var(--soft);font-size:.96rem;line-height:1.45}
+    .section-head{display:flex; align-items:end; justify-content:space-between; gap:20px;margin-bottom:28px}.section-head h2{margin:14px 0 0;font-size:clamp(1.8rem, 3vw, 3rem);line-height:1;letter-spacing:-.05em}.section-head p{margin:8px 0 0; max-width:720px}
+    .proof-grid,.projects-grid,.skills-grid,.timeline{display:grid;gap:18px}.proof-grid{grid-template-columns:repeat(3, minmax(0, 1fr))}.projects-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}.skills-grid{grid-template-columns:repeat(3, minmax(0, 1fr))}.timeline{grid-template-columns:1fr 1fr}
+    .proof-card,.project-card,.skill-card,.timeline-item,.contact-card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));padding:24px;box-shadow:var(--shadow)}
+    .proof-card h3,.project-card h3,.skill-card h3,.timeline-item h3,.contact-card h3{margin:0 0 8px;font-size:1.12rem;letter-spacing:-.03em}.proof-card p,.project-card p,.skill-card p,.timeline-item p,.contact-card p{margin:0;color:var(--soft)}
+    .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}.tag{display:inline-flex; align-items:center;padding:8px 11px;border:1px solid var(--line-2);border-radius:999px;background:rgba(255,255,255,.04);color:#dbe8ff;font-size:.87rem;font-weight:700}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.about-card{padding:30px}.about-card ul{margin:18px 0 0;padding-left:18px;color:#d7e3f5}.about-card li+li{margin-top:10px}
+    .projects-toolbar{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px}.filter-btn{padding:10px 14px; border-radius:999px; border:1px solid var(--line-2);background:rgba(255,255,255,.035); color:#e9f2ff; font-weight:700; cursor:pointer}.filter-btn.active{background:linear-gradient(135deg, rgba(99,179,255,.23), rgba(139,123,255,.24)); border-color:rgba(149,190,255,.35)}
+    .project-card{display:flex; flex-direction:column; gap:16px}.project-top{display:flex; align-items:flex-start; justify-content:space-between; gap:14px}.project-top span{display:inline-flex; padding:8px 10px; border-radius:999px; background:rgba(126,242,197,.12); color:var(--good); font-weight:800; font-size:.8rem; border:1px solid rgba(126,242,197,.24)}
+    .project-card .meta{display:grid; gap:10px}.project-card .meta div{padding:12px 14px; border-radius:16px; border:1px solid var(--line); background:rgba(255,255,255,.03)}
+    .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}.contact-list{display:grid; gap:12px; margin-top:18px}.contact-item{display:flex; gap:12px; align-items:flex-start}.contact-item strong{display:block; margin-bottom:2px}
+    footer{padding:28px 0 54px; color:#a9bbd6; text-align:center}
+    @media (max-width: 1024px){.hero-grid,.about-grid,.contact-grid,.projects-grid,.proof-grid,.skills-grid,.timeline{grid-template-columns:1fr}}
+    @media (max-width: 760px){.section{padding:72px 0}.hero{padding-top:56px}.hero-card{padding:24px}.mini-grid{grid-template-columns:1fr}.nav{flex-direction:column; align-items:flex-start}.nav-links{gap:14px}}
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="#home">Christalin<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#journey">Parcours</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <span class="eyebrow">Développeur full stack • data • cybersécurité</span>
+        <h1>Je construis des <span class="accent">projets concrets</span> avec une forte base en logique, développement et résolution de problèmes.</h1>
+        <p class="lead">Je suis Fitahiana Christalin RATSIMBAZAFY, étudiant à l’ENI Fianarantsoa. Je travaille sur des projets en développement web, algorithmique, data science et cybersécurité, avec une approche orientée apprentissage rapide, rigueur technique et impact réel.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="CV.html" download>Télécharger mon CV</a>
+          <a class="btn secondary" href="#projects">Voir mes projets</a>
+          <a class="btn secondary" href="https://github.com/Rafita261" target="_blank" rel="noopener noreferrer">Mon GitHub</a>
+        </div>
+      </div>
+      <aside class="panel mini-grid">
+        <div class="mini-card"><strong>Full stack</strong><span>Développement web</span><p>Applications web, backend, structuration MVC, API REST, interfaces propres et évolutives.</p></div>
+        <div class="mini-card"><strong>DSA</strong><span>Problem solving</span><p>Goût prononcé pour l’algorithmique, l’optimisation, les structures de données et les challenges techniques.</p></div>
+        <div class="mini-card"><strong>Data / IA</strong><span>Analyse et ML</span><p>Intérêt fort pour la statistique, l’analyse de données, les modèles simples et les applications intelligentes.</p></div>
+        <div class="mini-card"><strong>Cyber</strong><span>Sécurité offensive et défensive</span><p>Curiosité forte pour le hacking éthique, les CTF, l’analyse forensique et la sécurisation d’applications.</p></div>
+      </aside>
+    </div>
+  </header>
+  <section class="section" id="proof">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">Ce que je démontre</span><h2>Des compétences appuyées par des réalisations</h2></div><p class="muted">Plutôt qu’une simple liste de technologies, ce portfolio met en avant ce que je sais réellement faire, apprendre et construire.</p></div>
+      <div class="proof-grid">
+        <article class="proof-card"><h3>Capacité d’apprentissage rapide</h3><p>Je passe vite d’un sujet théorique à une implémentation pratique, que ce soit en web, data, algorithmique ou cybersécurité.</p><div class="tag-row"><span class="tag">Autonomie</span><span class="tag">Veille</span><span class="tag">Adaptabilité</span></div></article>
+        <article class="proof-card"><h3>Résolution de problèmes</h3><p>J’aime décortiquer un problème, tester des hypothèses, corriger, optimiser et arriver à une solution claire et défendable.</p><div class="tag-row"><span class="tag">DSA</span><span class="tag">Debug</span><span class="tag">Rigueur</span></div></article>
+        <article class="proof-card"><h3>Vision projet</h3><p>Je m’intéresse aux projets qui ont une utilité réelle : outils de sécurité, apps web, systèmes d’analyse, plateformes intelligentes.</p><div class="tag-row"><span class="tag">Impact</span><span class="tag">Conception</span><span class="tag">Innovation</span></div></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">À propos</span><h2>Profil</h2></div></div>
+      <div class="about-grid">
+        <div class="panel about-card"><p>Je suis étudiant en informatique à l’ENI Fianarantsoa et je développe progressivement un profil polyvalent : développement full stack, algorithmique, data science, intelligence artificielle et cybersécurité. Mon objectif est de construire une expertise technique solide tout en créant des projets utiles et ambitieux.</p><ul><li>Formation en informatique générale avec une base en programmation, bases de données, maths et conception logicielle.</li><li>Intérêt particulier pour les projets techniques qui demandent de la logique, de l’architecture et de l’analyse.</li><li>Volonté de contribuer à des environnements sérieux où la progression et l’impact comptent vraiment.</li></ul></div>
+        <div class="panel about-card"><h3>Ce que je recherche</h3><p class="muted">Des opportunités pour collaborer, apprendre vite et apporter une vraie valeur technique.</p><div class="tag-row"><span class="tag">Stage</span><span class="tag">Collaboration</span><span class="tag">Open source</span><span class="tag">Projet tech</span></div><div style="margin-top:18px"><a class="btn primary" href="CV.html" download>Télécharger CV</a></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">Projets</span><h2>Réalisations et projets représentatifs</h2></div><p class="muted">Voici des projets qui montrent ma manière de réfléchir, de coder et de relier la théorie à la pratique.</p></div>
+      <div class="projects-toolbar"><button class="filter-btn active" data-filter="all">Tous</button><button class="filter-btn" data-filter="web">Web</button><button class="filter-btn" data-filter="data">Data / IA</button><button class="filter-btn" data-filter="cyber">Cybersécurité</button><button class="filter-btn" data-filter="algo">Algo</button></div>
+      <div class="projects-grid">
+        <article class="project-card" data-category="web"><div class="project-top"><h3>Mini-projet de chat en PHP</h3><span>Web</span></div><p>Projet de messagerie simple conçu pour apprendre la gestion des données, le backend PHP, la persistance MySQL et l’organisation progressive du code vers une structure plus propre.</p><div class="meta"><div><strong>Ce que cela démontre</strong><p>Manipulation de base de données, logique backend, débogage, refactorisation et réflexion sur l’architecture MVC.</p></div><div><strong>Stack</strong><p>PHP, MySQL, HTML, CSS, JavaScript</p></div></div><div class="tag-row"><span class="tag">Backend</span><span class="tag">MVC</span><span class="tag">CRUD</span></div></article>
+        <article class="project-card" data-category="data"><div class="project-top"><h3>Analyse de l’indice de Gini et courbe de Lorenz</h3><span>Data</span></div><p>Mini-projet académique réalisé avec Excel/VBA pour automatiser le calcul d’un indicateur d’inégalité et en générer la visualisation associée.</p><div class="meta"><div><strong>Ce que cela démontre</strong><p>Capacité à relier statistiques, automatisation et visualisation de données dans un cadre concret.</p></div><div><strong>Stack</strong><p>Excel, VBA, statistique descriptive</p></div></div><div class="tag-row"><span class="tag">Data analysis</span><span class="tag">Automatisation</span><span class="tag">Visualisation</span></div></article>
+        <article class="project-card" data-category="cyber"><div class="project-top"><h3>Challenges CTF et analyse sécurité</h3><span>Cyber</span></div><p>Résolution de challenges en forensic, cryptographie, exploitation, analyse mémoire, stéganographie et débogage de services vulnérables.</p><div class="meta"><div><strong>Ce que cela démontre</strong><p>Esprit analytique, méthodologie, persévérance et capacité à traiter des problèmes techniques non triviaux.</p></div><div><strong>Stack</strong><p>Linux, Python, outils de forensic, scripts, debugging</p></div></div><div class="tag-row"><span class="tag">CTF</span><span class="tag">Forensic</span><span class="tag">Crypto</span></div></article>
+        <article class="project-card" data-category="cyber data"><div class="project-top"><h3>Idées de plateformes de détection et prévention</h3><span>Sécurité / IA</span></div><p>Conception d’idées de projets autour des IDS/IPS conteneurisés, de la détection de menaces et de la sécurisation de systèmes intelligents.</p><div class="meta"><div><strong>Ce que cela démontre</strong><p>Capacité à penser au-delà du code : architecture système, sécurité, déploiement et innovation.</p></div><div><strong>Stack</strong><p>Docker, cybersécurité, ML concepts</p></div></div><div class="tag-row"><span class="tag">Architecture</span><span class="tag">Docker</span><span class="tag">Innovation</span></div></article>
+        <article class="project-card" data-category="algo"><div class="project-top"><h3>Entraînement algorithmique et DSA</h3><span>Algo</span></div><p>Travail régulier sur la résolution de problèmes, les structures de données et les raisonnements efficaces pour progresser en compétitions et entretiens techniques.</p><div class="meta"><div><strong>Ce que cela démontre</strong><p>Maîtrise croissante de la logique, des approches heuristiques et de l’analyse de complexité.</p></div><div><strong>Stack</strong><p>Python, pseudo-code, structures de données</p></div></div><div class="tag-row"><span class="tag">Problem solving</span><span class="tag">DSA</span><span class="tag">Complexité</span></div></article>
+        <article class="project-card" data-category="web"><div class="project-top"><h3>Portfolio personnel</h3><span>Web</span></div><p>Conception d’un portfolio orienté crédibilité professionnelle, mettant en valeur les compétences, les projets réels et un CV téléchargeable.</p><div class="meta"><div><strong>Ce que cela démontre</strong><p>Capacité à présenter une identité technique clairement et à transformer un simple site vitrine en outil de positionnement professionnel.</p></div><div><strong>Stack</strong><p>HTML, CSS, structuration UX</p></div></div><div class="tag-row"><span class="tag">Portfolio</span><span class="tag">Branding</span><span class="tag">UX</span></div></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">Compétences</span><h2>Compétences techniques</h2></div></div>
+      <div class="skills-grid">
+        <article class="skill-card"><h3>Développement</h3><p>Python, PHP, JavaScript, HTML, CSS, SQL, MySQL, structuration MVC, création d’API REST.</p></article>
+        <article class="skill-card"><h3>Data & IA</h3><p>Statistique descriptive, analyse de données, automatisation, bases de machine learning et réflexion autour de modèles intelligents.</p></article>
+        <article class="skill-card"><h3>Cybersécurité</h3><p>CTF, forensic, cryptographie, Linux, scripts d’analyse, curiosité forte pour la sécurité offensive et défensive.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">Parcours</span><h2>Formation et progression</h2></div></div>
+      <div class="timeline">
+        <article class="timeline-item"><h3>ENI Fianarantsoa</h3><p>Étudiant en informatique générale avec un intérêt croissant pour le full stack, la data science, l’IA et la cybersécurité.</p></article>
+        <article class="timeline-item"><h3>Apprentissage continu</h3><p>Progression autonome via projets, débogage, challenges techniques, tutoriels, expérimentation et pratique régulière.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">Contact</span><h2>Discutons d’un projet, d’un stage ou d’une collaboration</h2></div></div>
+      <div class="contact-grid">
+        <article class="contact-card"><h3>Coordonnées</h3><div class="contact-list"><div class="contact-item"><div><strong>Email</strong><span class="muted">chr1sk3ly@gmail.com</span></div></div><div class="contact-item"><div><strong>Téléphone</strong><span class="muted">+261 32 11 780 69</span></div></div><div class="contact-item"><div><strong>GitHub</strong><span class="muted"><a href="https://github.com/Rafita261" target="_blank">github.com/Rafita261</a></span></div></div></div></article>
+        <article class="contact-card"><h3>CV & liens</h3><p>Mon CV est directement téléchargeable depuis ce portfolio.</p><div class="hero-actions" style="margin-top:16px"><a class="btn primary" href="CV.html" download>Télécharger le CV</a><a class="btn secondary" href="https://github.com/Rafita261/Chriskely" target="_blank">Voir le dépôt</a></div></article>
+      </div>
+    </div>
+  </section>
+  <footer><div class="container">Portfolio de Fitahiana Christalin RATSIMBAZAFY — construit pour mieux démontrer mes compétences, projets et objectifs.</div></footer>
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          const category = card.dataset.category;
+          card.style.display = (filter === 'all' || category.includes(filter)) ? 'flex' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
