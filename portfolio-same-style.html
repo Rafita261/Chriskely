@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Fitahiana Christalin</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./min_screen.css">
+    <style>
+        .top-right-links {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .top-right-links a {
+            padding: 10px 15px;
+            background-color: #333333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .top-right-links a:hover {
+            transform: scale(1.05);
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .cta-row a {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: #1B5E20;
+            color: #FFF8EC;
+        }
+
+        .btn-secondary {
+            background-color: #FFD875;
+            color: #1B5E20;
+        }
+
+        .highlight-box {
+            background-color: #FFD875;
+            border-radius: 15px;
+            padding: 15px 20px;
+            margin-top: 20px;
+        }
+
+        .stat-grid,
+        .project-grid,
+        .journey-grid,
+        .contact-grid,
+        .skill-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .stat-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: 25px;
+        }
+
+        .stat-card,
+        .project-card,
+        .journey-card,
+        .contact-card,
+        .skill-card,
+        .cv-card {
+            background-color: #FFD875;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .stat-card strong {
+            font-size: 1.6em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .project-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .project-card:hover,
+        .stat-card:hover,
+        .journey-card:hover,
+        .skill-card:hover,
+        .cv-card:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        .pill-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .pill {
+            background-color: #FFF8EC;
+            color: #1B5E20;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .journey-grid,
+        .contact-grid,
+        .skill-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .skill-card ul,
+        .project-card ul,
+        .journey-card ul,
+        .cv-card ul {
+            margin: 10px 0 0;
+            padding-left: 18px;
+        }
+
+        .section-intro {
+            max-width: 850px;
+        }
+
+        .cv-card {
+            margin-top: 20px;
+        }
+
+        .footer-answer {
+            margin-top: 10px;
+            color: #FFF8EC;
+        }
+
+        @media (max-width: 768px) {
+            .top-right-links {
+                position: static;
+                margin: 15px 15px 0;
+                justify-content: center;
+            }
+
+            .project-grid,
+            .stat-grid,
+            .journey-grid,
+            .contact-grid,
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-right-links">
+        <a href="CV.html" download>Télécharger mon CV</a>
+        <a href="https://github.com/Rafita261" target="_blank" rel="noopener noreferrer">Mon GitHub</a>
+    </div>
+
+    <section id="home" class="fade-in">
+        <div class="flex-row">
+            <div>
+                <h1 class="animate-text">Salut, je suis Fitahiana Christalin <br> RATSIMBAZAFY</h1>
+                <p class="animate-text">Étudiant en informatique à l’ENI Fianarantsoa, passionné par le développement full stack, l’algorithmique, la data, l’intelligence artificielle et la cybersécurité. J’aime construire des projets concrets qui démontrent ma logique, ma capacité d’apprentissage et mon sérieux technique.</p>
+                <div class="cta-row">
+                    <a class="btn-primary" href="#projects">Voir mes projets</a>
+                    <a class="btn-secondary" href="#contact">Me contacter</a>
+                </div>
+                <div class="highlight-box">
+                    <h3>Ce que ce portfolio montre vraiment</h3>
+                    <p>Ici, je ne me contente pas de lister des technologies. Je mets surtout en avant ce que je sais construire, comprendre, améliorer et résoudre.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <strong>Développement</strong>
+                <p>Applications web, backend, architecture MVC, APIs REST, logique métier et structuration de projets.</p>
+            </div>
+            <div class="stat-card">
+                <strong>Problem solving</strong>
+                <p>Goût fort pour les DSA, l’analyse de bugs, les raisonnements efficaces et les challenges techniques.</p>
+            </div>
+            <div class="stat-card">
+                <strong>Cybersécurité & data</strong>
+                <p>Curiosité active pour les CTF, l’analyse forensic, la crypto, les données et les bases du ML.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p class="section-intro">Je développe progressivement un profil polyvalent autour du génie logiciel, de l’analyse, de la sécurité et de la donnée. J’apprécie particulièrement les projets techniques ambitieux qui exigent de la logique, de la persévérance et une bonne capacité d’adaptation.</p>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h3>Ce que je recherche</h3>
+                <ul>
+                    <li>Des projets concrets avec un vrai impact</li>
+                    <li>Des opportunités de stage ou de collaboration</li>
+                    <li>Un environnement où progresser rapidement</li>
+                    <li>Des défis qui demandent de réfléchir en profondeur</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Ce que j’apporte</h3>
+                <ul>
+                    <li>Apprentissage autonome rapide</li>
+                    <li>Bonne logique algorithmique</li>
+                    <li>Curiosité technique forte</li>
+                    <li>Rigueur dans l’analyse et le débogage</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Mes projets et réalisations</h2>
+        <p class="section-intro">Voici quelques réalisations et types de projets qui représentent le mieux mon évolution et mes compétences réelles.</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Mini-projet de chat en PHP</h3>
+                <p>Projet utilisé pour apprendre le backend, la gestion des messages, l’interaction avec MySQL et la restructuration du code vers une approche plus propre.</p>
+                <ul>
+                    <li>Manipulation de base de données</li>
+                    <li>Débogage d’ordre d’affichage des messages</li>
+                    <li>Réflexion sur MVC et API REST</li>
+                </ul>
+                <div class="pill-row">
+                    <span class="pill">PHP</span>
+                    <span class="pill">MySQL</span>
+                    <span class="pill">MVC</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Analyse de l’indice de Gini</h3>
+                <p>Projet académique pour automatiser le calcul de l’indice de Gini et l’affichage de la courbe de Lorenz avec Excel/VBA.</p>
+                <ul>
+                    <li>Analyse de données</li>
+                    <li>Automatisation de calculs</li>
+                    <li>Visualisation statistique</li>
+                </ul>
+                <div class="pill-row">
+                    <span class="pill">Excel</span>
+                    <span class="pill">VBA</span>
+                    <span class="pill">Statistiques</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Résolution de challenges CTF</h3>
+                <p>Travail sur des exercices de forensic, cryptographie, stéganographie, exploitation et analyse de systèmes vulnérables.</p>
+                <ul>
+                    <li>Analyse technique méthodique</li>
+                    <li>Scripts et outils Linux</li>
+                    <li>Persévérance sur des problèmes complexes</li>
+                </ul>
+                <div class="pill-row">
+                    <span class="pill">Linux</span>
+                    <span class="pill">Forensic</span>
+                    <span class="pill">Crypto</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Projets orientés sécurité et IA</h3>
+                <p>Réflexion et conception de projets autour de la détection d’intrusions, de la sécurisation de systèmes et de l’intégration de modèles intelligents.</p>
+                <ul>
+                    <li>Vision architecture + sécurité</li>
+                    <li>Approche innovation</li>
+                    <li>Projection vers Docker et ML</li>
+                </ul>
+                <div class="pill-row">
+                    <span class="pill">Docker</span>
+                    <span class="pill">IDS/IPS</span>
+                    <span class="pill">ML</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Compétences principales</h2>
+        <div class="flex-row services">
+            <div>
+                <h3>Développement full stack</h3>
+                <p>Création de pages web, logique backend, bases de données, structuration de projets et APIs simples.</p>
+            </div>
+            <div>
+                <h3>Algorithmique et DSA</h3>
+                <p>Résolution de problèmes, raisonnement, optimisation et compréhension progressive des structures de données.</p>
+            </div>
+            <div>
+                <h3>Data et analyse</h3>
+                <p>Statistique descriptive, automatisation, réflexion sur le machine learning et traitement de données.</p>
+            </div>
+            <div>
+                <h3>Cybersécurité</h3>
+                <p>CTF, forensic, crypto, analyse de vulnérabilités et forte motivation pour la sécurité appliquée.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey">
+        <h2>Formation et progression</h2>
+        <div class="journey-grid">
+            <div class="journey-card">
+                <h3>ENI Fianarantsoa</h3>
+                <p>Étudiant en informatique générale avec un intérêt marqué pour le développement, la donnée, l’IA et la cybersécurité.</p>
+                <ul>
+                    <li>Base solide en programmation</li>
+                    <li>Apprentissage progressif des architectures logicielles</li>
+                    <li>Ouverture vers des projets innovants</li>
+                </ul>
+            </div>
+            <div class="journey-card">
+                <h3>Progression autonome</h3>
+                <p>J’apprends constamment à travers des projets personnels, des challenges techniques, du debugging et des échanges pédagogiques.</p>
+                <ul>
+                    <li>Pratique régulière</li>
+                    <li>Expérimentation personnelle</li>
+                    <li>Approfondissement orienté résultats</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cv-card">
+            <h3>CV téléchargeable</h3>
+            <p>J’ai ajouté une version de CV téléchargeable pour permettre un accès direct à mon profil professionnel.</p>
+            <div class="cta-row">
+                <a class="btn-primary" href="CV.html" download>Télécharger mon CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="min-height: auto;">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Coordonnées</h3>
+                <p><strong>Email :</strong> chr1sk3ly@gmail.com</p>
+                <p><strong>Téléphone :</strong> +261 32 11 780 69</p>
+                <p><strong>GitHub :</strong> github.com/Rafita261</p>
+                <p><strong>Localisation :</strong> Fianarantsoa, Madagascar</p>
+            </div>
+            <div class="contact-card">
+                <h3>Pourquoi me contacter ?</h3>
+                <ul>
+                    <li>Stage académique ou professionnel</li>
+                    <li>Collaboration sur projet technique</li>
+                    <li>Projet web, data ou cybersécurité</li>
+                    <li>Échange autour d’une opportunité sérieuse</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h3>FAQ</h3>
+            <p style="cursor: pointer;" onclick="toggleFaq(1)"><span id="sign1">+</span> Quelles compétences ce portfolio met-il le plus en avant ?</p>
+            <div id="res1" class="footer-answer"></div>
+            <p style="cursor: pointer;" onclick="toggleFaq(2)"><span id="sign2">+</span> Comment peut-on collaborer avec moi ?</p>
+            <div id="res2" class="footer-answer"></div>
+        </div>
+    </footer>
+
+    <script>
+        const faq = {
+            1: "Développement full stack, algorithmique, analyse de données, cybersécurité et capacité à apprendre vite sur des sujets techniques.",
+            2: "Par mail pour un stage, un projet, une collaboration technique ou une opportunité liée au développement, à la data ou à la cybersécurité."
+        };
+
+        function toggleFaq(i) {
+            const sign = document.getElementById(`sign${i}`);
+            const res = document.getElementById(`res${i}`);
+            if (sign.innerText === '+') {
+                res.innerText = faq[i];
+                sign.innerText = '-';
+            } else {
+                res.innerText = '';
+                sign.innerText = '+';
+            }
+        }
+    </script>
+</body>
+</html>
